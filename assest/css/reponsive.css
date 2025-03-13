@@ -1,5 +1,5 @@
 /*================ RESPONSIVE DESIGN ================*/
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /*================SECTION HERO================*/
   .hero-section .hero-wrapper {
     flex-direction: column;
@@ -118,27 +118,54 @@
 
   /*================SECTION MAKNA SINERGIS ================*/
   .makna-sinergis {
-    padding: 1.5em;    
-    max-height: 130vh;
+    height: 130vh !important;
+  }
+  .container-text h1 {
+    font-size: clamp(2.5rem, 5vw, 3rem) !important;
   }
   
-  .container-text h1 {
-    font-size: clamp(2.5rem, 4vw, 3rem) !important; 
-  }
-
   .container-text p {
     font-size: clamp(1rem, 4vw, 1.2rem) !important;
+    max-width: 350px !important;
+  }
+  .container-accordion {
+    width: 370px !important;
+  }
+  .container-accordion li label {
+    font-size: 1.2rem !important;
+    padding: 10px !important;
+  }
+  .container-accordion .content {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 !important;
   }
 
-  .assets {
-    width: 100%;
+  .content img {
+    max-width: 50% !important; 
+    margin-bottom: -20px;
   }
-  .cahaya-kanan, 
-  .cahaya-kiri {
-    width: 80%;
-    bottom: 30% !important;
+
+  .content p {
+    text-align: center !important;
+    margin-left: 0 !important;
+    font-size: 0.9rem !important;
+  }
+  .cahaya-kanan{
+    width: 100% !important;
+    transform: scale(1.5);
+    bottom: 49% !important;
+    left: 20% !important;
+  }
+  .cahaya-kiri{
+    width: 100% !important;
+    transform: scale(1.5);
+    top: 60% !important;
+    right: 20% !important;
   }
   .awan-bawah {
-    height: 100px !important; 
+    width: 100% !important;
+    height: 150px !important;
+    bottom: 0% !important;
   }
 }
