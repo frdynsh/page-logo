@@ -50,3 +50,16 @@ var swiper = new Swiper('.swiper-container', {
     }
 });
 
+
+// ACCORDION
+document.querySelectorAll('.accordion-toggle').forEach((checkbox) => {
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        document.querySelectorAll('.accordion-toggle').forEach((other) => {
+          if (other !== this) {
+            other.checked = false;
+          }
+        });
+      }
+    });
+  });

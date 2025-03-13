@@ -2,6 +2,7 @@ body {
   font-family: "Plus Jakarta Sans";
   margin: 0;
   padding: 0;
+  background-color: #110621;
 }
 
 /*================SECTION HERO================*/
@@ -11,17 +12,17 @@ body {
   background-position: center;
   overflow: hidden;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   max-width: 1500px;
   margin: 0 auto;
-  height: 90vh;
+  height: 100vh;
 }
 
 .hero-section .hero-wrapper {
-  margin-bottom: 50em;
-  width: 80%;
+  padding-bottom: 20em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -39,14 +40,13 @@ body {
   color: rgb(0, 255, 255);
   font-size: clamp(4.5rem, 2vw, 5rem);
   font-weight: 600;
+  padding-bottom: 0.3em;
   letter-spacing: 0.32px;
-  margin-bottom: 0.5em;
   transition: 0.1s;
 }
 
 .text-hero p {
   color: #ffffff;
-  margin-bottom: 3rem;
   font-weight: 600;
   font-size: clamp(2.5rem, 2vw, 3rem);
 }
@@ -71,10 +71,8 @@ body {
   width: 100%;
   max-width: 1500px;
   height: auto;
-  max-height: 250px;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -50px;
+  left: 0;
   z-index: 9;
   pointer-events: none;
 }
@@ -87,6 +85,7 @@ body {
   align-items: center;
   overflow: hidden;
   position: relative;
+  padding-top: 5em;
   padding-bottom: 7em;
   margin: 0 auto;
   max-width: 1500px;
@@ -95,16 +94,17 @@ body {
 .himtika-section .himtika-text{
   margin: auto;
   color: #ffffff;
-  margin-bottom: 2em;
   max-width: 900px;
 }
 .himtika-section .himtika-text h1{
   font-size: clamp(3.5rem, 2vw, 4rem);
-  margin-top: 2em;
-  margin-bottom: 1em;
+  position: relative;
+  margin: auto;
+  max-width: 700px;
   font-weight: 500;
 }
 .himtika-section .himtika-text p{
+  margin-top: 2em;
   font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
@@ -509,7 +509,8 @@ body {
 .sapa-sinergis .sinergis-wrapper .sinergis-text{
   flex: 1.5;
   color: #ffffff;
-  margin: 0 5em 5em 5em;
+  margin: 5em;
+  padding-bottom: 5em;
   text-align: left;
   position: relative;
 }
@@ -557,7 +558,7 @@ body {
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
-  min-height: 160vh;
+  height: 150vh;
   background-color: #110621;
   display: flex;
   justify-content: center; 
@@ -568,7 +569,6 @@ body {
 }
 
 .container-sinergis{
-  margin-top: -15em;
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -600,76 +600,76 @@ body {
   font-weight: 500;
 }
 .container-text p{
-  margin-top: 1em;
+  margin-top: 1.5em;
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   display: inline-block;
 }
+
+
 .container-accordion{
-  color: #ffffff;
-  width: 700px;
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
+  margin-top: -2em;
+  margin-bottom: 5em;
+  width: 600px;
 }
-
-details {
-  background: linear-gradient(to right, #643CB8 0%, #A056C9 100%);
-  border-radius: 15px;
-  padding: 15px;
+.container-accordion li{
+  list-style: none;
   width: 100%;
-  transition: all 0.3s ease-in-out;
-  position: relative;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #643CB8 0%, #A056C9 100%);
 }
 
-summary {
-  font-size: 1.5rem;
-  color: #110621;
-  font-weight: 900;
-  text-align: center;
-  align-items: center;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
+.container-accordion li label{
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  color: #110621;
+  font-size: 1.5rem;
+  font-weight: 900;
+  cursor: pointer;
 }
-
-details[open] summary::after {
-  transform: rotate(-180deg);
-}
-details:hover summary {
+.container-accordion li label:hover{
   color: #d1a3ff;
   transition: color 0.3s ease-in-out;
 }
 
-/* Efek dropdown */
-.accordion-text {
-  max-height: 0;
-  display: flex;
-  align-items: center; 
-  gap: 20px;
-  opacity: 0;
-  overflow: hidden;
-  text-align: left;
-  transition: height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+input[type="checkbox"]{
+  display: none;
+}
+.container-accordion .content{
   color: #FFFFFF;
-}
-.accordion-text img {
-  width: 120px;  /* Atur ukuran gambar agar tidak terlalu besar */
-  height: auto; 
-  transform: scale(1.3);
-  flex-shrink: 0;  /* Agar gambar tidak mengecil saat teks panjang */
-}
-.accordion-text p {
-  flex: 1; 
-  font-size: 1.2rem;
-  color: white;
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-details[open] .accordion-text {
-  max-height: 200px;
+.container-accordion input[type="checkbox"]:checked + label + .content{
+  max-height: 500px;
+  padding: 10px 10px 0px;
   opacity: 1;
-  padding: 10px 15px;
+  transform: scale(1);
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content p{
+  margin-left: 20px;
+  max-width: 400px;
+  text-align: left;
+}
+.content img {
+  max-width: 25%;
+  height: auto;
+  object-fit: cover;
 }
 
 .assets {

@@ -1,51 +1,144 @@
 /*================ RESPONSIVE DESIGN ================*/
 @media (max-width: 768px) {
-    /* HERO SECTION */
-    .hero-section .hero-wrapper {
-        flex-direction: column;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-    }
-    .hero-section .hero-wrapper .text-hero {
-        width: 100%;
-        max-width: 80%;
-        margin: 0 auto;
-    }
-    .hero-section .hero-wrapper .text-hero h1, 
-    .hero-section .hero-wrapper .text-hero p {
-        text-align: center; 
-    }
-    .image-hero img {
-        width: 80%; 
-        transform: scale(1.3);
-    }
+  /*================SECTION HERO================*/
+  .hero-section .hero-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px !important;
+  }
+  .hero-section .hero-wrapper .text-hero {
+      width: 100%;
+      max-width: 300px !important;
+      margin: 0 auto;
+  }
+  .text-hero h1 {
+      font-size: clamp(3.18rem, 3vw, 3.5rem) !important;
+      text-align: center;
+  }
+  .text-hero p {
+      font-size: clamp(1.4rem, 3vw, 1.8rem) !important;
+      text-align: center;
+  }
+  .overlay-hero{
+      width: 100%;
+      height: 140px !important;
+      bottom: -10px !important;
+      left: 0;
+  }
 
+  /*================SECTION HIMTIKA================*/
+  .himtika-section {
+    padding-bottom: 4em !important; 
+    max-width: 100%;
+  }
+  .himtika-section .himtika-text {
+    max-width: 80% !important; 
+    margin-bottom: -1.5em !important;
+  } 
+  .himtika-section .himtika-text h1 {
+    font-size: clamp(2rem, 5vw, 2rem) !important; 
+  }
 
-    /* KABINET SECTION */
-    .kabinet-section .kabinet-wrapper {
-        flex-direction: column; /* Ubah layout jadi vertikal */
-        height: auto;
-        text-align: center;
-      }
-    
-      .kabinet-section .kabinet-wrapper .kabinet-text {
-        order: 1; /* Pastikan teks di atas */
-        text-align: center;
-        margin: 2em 1em;
-        flex: none; /* Atur ulang flex agar tidak stretch */
-      }
-    
-      .kabinet-section .kabinet-wrapper .kabinet-image {
-        order: 2; /* Pastikan gambar di bawah */
-        margin: 0;
-        flex: none;
-        width: 80%;
-      }
-    
-      .kabinet-image img {
-        transform: scale(1); /* Kurangi skala gambar agar tidak terlalu besar */
-        width: 100%;
-      }
+  /*================SECTION SAPA-SINERGIS================*/
+  .sapa-sinergis {
+    position: relative;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+  }
+  .sapa-sinergis .sinergis-wrapper {
+    margin-top: -5em !important;
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  .sapa-sinergis .sinergis-wrapper .sinergis-text {
+    order: 1;
+    text-align: center;
+    flex: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .sinergis-text h1{
+    max-width: 350px !important;
+    text-align: center;
+    font-size: clamp(2.5rem, 3vw, 3rem) !important;
+    margin-bottom: 1em;
+  }
+  .sinergis-text p{
+    max-width: 300px !important;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.1rem) !important;
+    font-weight: 300;
+    padding: 5px 10px;
+    display: inline-block;
+  }
+  .sapa-sinergis .sinergis-wrapper .sinergis-image {
+    order: 2;
+    flex: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: -15em;
+  }
+  
+  .sinergis-image img {
+    object-fit: contain;
+    max-width: 110%;
+    height: auto;
+    display: block;
+    transform: scale(1.3) !important ;
+  }
+  .overlay-sinergis {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 130px !important;
+    width: 100%;
+    z-index: 9 !important;
+    pointer-events: none;
+  }
+
+  /*================SECTION MAKNA SINERGIS ================*/
+  .makna-sinergis {
+    padding: 1.5em;    
+    max-height: 130vh;
+  }
+  
+  .container-text h1 {
+    font-size: clamp(2.5rem, 4vw, 3rem) !important; 
+  }
+
+  .container-text p {
+    font-size: clamp(1rem, 4vw, 1.2rem) !important;
+  }
+
+  .assets {
+    width: 100%;
+  }
+  .cahaya-kanan, 
+  .cahaya-kiri {
+    width: 80%;
+    bottom: 30% !important;
+  }
+  .awan-bawah {
+    height: 100px !important; 
+  }
 }
