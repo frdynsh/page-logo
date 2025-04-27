@@ -9,6 +9,9 @@ body {
   background-color: #110621;
   text-decoration: none;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 .auto-container{
 	position:static;
