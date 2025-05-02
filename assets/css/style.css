@@ -504,7 +504,8 @@ body {
 .mobile-menu .nav-logo{
 	position:relative;
 	padding:30px 25px;
-	text-align:left;	
+	text-align:left;
+  width: 70%;
 }
 
 .mobile-menu-visible{
@@ -775,12 +776,14 @@ body {
   padding-bottom: 0.3em;
   letter-spacing: 0.32px;
   transition: 0.1s;
+  filter: drop-shadow(15px 15px 1px rgba(0, 0, 0, 0.5));
 }
 
 .text-hero p {
   color: #ffffff;
   font-weight: 600;
   font-size: clamp(2.5rem, 2vw, 3rem);
+  filter: drop-shadow(15px 15px 1px rgba(0, 0, 0, 0.5));
 }
 
 .hero-section .hero-wrapper .image-hero {
