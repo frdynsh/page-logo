@@ -2,6 +2,9 @@
 @import url('animated.css');
 @import url('scrollbar.css');
 
+* {
+  text-decoration: none;
+}
 body {
   font-family: "Plus Jakarta Sans";
   margin: 0;
